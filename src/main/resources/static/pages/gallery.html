@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
 <title>Gallery</title>
 <!-- for-mobile-apps -->
@@ -33,6 +33,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 </head>
 	
 <body>
+
+
 <!-- banner -->
 	<div class="banner1">
 		<div class="container">
@@ -76,87 +78,18 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="gallery-grids">
 				<section>
 					<ul id="da-thumbs" class="da-thumbs">
-						<li>
+						<li th:each="activitydata : ${activitydataList}">
 							<a href="images/10.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
 								<img src="images/10.jpg" alt="" />
 								<div>
-									<h5>project</h5>
-									<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
+									<h5 th:text="${activitydata.noName}"></h5>
+									<span th:text="${activitydata.name}"></span>
+									<span th:text="${activitydata.fullName}"></span>
+									<span th:text="${activitydata.flag}"></span>
 								</div>
 							</a>
 						</li>
-						<li>
-							<a href="images/11.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
-								<img src="images/11.jpg" alt="" />
-								<div>
-									<h5>project</h5>
-									<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="images/12.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
-								<img src="images/12.jpg" alt="" />
-								<div>
-									<h5>project</h5>
-									<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="images/13.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
-								<img src="images/13.jpg" alt="" />
-								<div>
-									<h5>project</h5>
-									<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
-								</div>
-							</a>
-						</li>
-						<li>	
-							<a href="images/14.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
-								<img src="images/14.jpg" alt="" />
-								<div>
-									<h5>project</h5>
-									<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="images/10.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
-								<img src="images/10.jpg" alt="" />
-								<div>
-									<h5>project</h5>
-									<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="images/11.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
-								<img src="images/11.jpg" alt="" />
-								<div>
-									<h5>project</h5>
-									<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="images/12.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
-								<img src="images/12.jpg" alt="" />
-								<div>
-									<h5>project</h5>
-									<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="images/9.jpg" rel="title" class="b-link-stripe b-animate-go  thickbox">
-								<img src="images/9.jpg" alt="" />
-								<div>
-									<h5>project</h5>
-									<span>non suscipit leo fringilla non suscipit leo fringilla molestie</span>
-								</div>
-							</a>
-						</li>
+
 						<div class="clearfix"> </div>
 					</ul>
 				</section>

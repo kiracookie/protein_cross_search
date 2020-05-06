@@ -4,32 +4,28 @@ import java.io.Serializable;
 
 /**
  * activitydata
- * @author 
+ *
+ * @author
  */
 public class Activitydata implements Serializable {
+    private static final long serialVersionUID = 1L;
     /**
      * 主键
      */
     private Integer id;
-
     /**
      * 名称
      */
     private String name;
-
     /**
      * 全名
      */
     private String fullName;
-
     private String noName;
-
     /**
      * 指标
      */
     private String flag;
-
-    private static final long serialVersionUID = 1L;
 
     public Integer getId() {
         return id;
@@ -84,10 +80,10 @@ public class Activitydata implements Serializable {
         }
         Activitydata other = (Activitydata) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
-            && (this.getFullName() == null ? other.getFullName() == null : this.getFullName().equals(other.getFullName()))
-            && (this.getNoName() == null ? other.getNoName() == null : this.getNoName().equals(other.getNoName()))
-            && (this.getFlag() == null ? other.getFlag() == null : this.getFlag().equals(other.getFlag()));
+                && (this.getName() == null ? other.getName() == null : this.getName().equals(other.getName()))
+                && (this.getFullName() == null ? other.getFullName() == null : this.getFullName().equals(other.getFullName()))
+                && (this.getNoName() == null ? other.getNoName() == null : this.getNoName().equals(other.getNoName()))
+                && (this.getFlag() == null ? other.getFlag() == null : this.getFlag().equals(other.getFlag()));
     }
 
     @Override

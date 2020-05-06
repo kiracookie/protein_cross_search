@@ -11,6 +11,7 @@ import java.util.List;
 public class ActivityDataService {
     @Autowired
     ActivitydataDao activitydataDao;
+
     public List<Activitydata> getActivityData(String searchKey) {
         return activitydataDao.getActivityData(searchKey);
     }
